@@ -164,7 +164,7 @@ function ESX.ShowNotification(message, type, length)
         AddTextComponentSubstringPlayerName(message)
         EndTextCommandThefeedPostTicker(0, 1)
     else
-        TriggerEvent("wais:addNotification", message, type, length)
+        TriggerEvent("wais:addNotification", type, message, length)
     end
 end
 ```
@@ -209,11 +209,11 @@ function QBCore.Functions.Notify(text, texttype, length)
         local caption = text.caption or 'Placeholder'
         texttype = texttype or 'primary'
         length = length or 5000
-        TriggerEvent("wais:addNotification", ttext, texttype, length)
+        TriggerEvent("wais:addNotification", texttype, ttext, length)
     else
         texttype = texttype or 'primary'
         length = length or 5000
-        TriggerEvent("wais:addNotification", text, texttype, length)
+        TriggerEvent("wais:addNotification", texttype, ttext, length)
     end
 end
 
@@ -222,8 +222,8 @@ end
 Or normally using:
 
 ```
-TriggerEvent("wais:addNotification", "Title", "Message", "Type", 5000)
-TriggerClientEvent("wais:addNotification", source, "Title", "Message", "Type", 5000)
+TriggerEvent("wais:addNotification",  type, "Title", "Message", 5000)
+TriggerClientEvent("wais:addNotification", source, type, "Title", "Message", 5000)
 
 --@title: string,
 --@message: string,
