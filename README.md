@@ -157,7 +157,8 @@ function ESX.ShowNotification(message, type, length)
 end
 
 Change to this:
-
+--We added the Title argument 
+--Remember to include the title argument in all scripts that use ESX.ShowNotification as much as possible, otherwise the message "Enter Text" will appear
 function ESX.ShowNotification(message, type, length, title)
     if Config.NativeNotify then
         BeginTextCommandThefeedPost('STRING')
