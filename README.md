@@ -158,13 +158,13 @@ end
 
 Change to this:
 
-function ESX.ShowNotification(message, type, length)
+function ESX.ShowNotification(message, type, length, title)
     if Config.NativeNotify then
         BeginTextCommandThefeedPost('STRING')
         AddTextComponentSubstringPlayerName(message)
         EndTextCommandThefeedPostTicker(0, 1)
     else
-        TriggerEvent("wais:addNotification", type, message, length)
+        TriggerEvent("wais:addNotification", type, title, message, length)
     end
 end
 ```
@@ -209,11 +209,11 @@ function QBCore.Functions.Notify(text, texttype, length)
         local caption = text.caption or 'Placeholder'
         texttype = texttype or 'primary'
         length = length or 5000
-        TriggerEvent("wais:addNotification", texttype, ttext, length)
+        TriggerEvent("wais:addNotification", texttype, caption, ttext, length)
     else
         texttype = texttype or 'primary'
         length = length or 5000
-        TriggerEvent("wais:addNotification", texttype, ttext, length)
+        TriggerEvent("wais:addNotification", texttype, caption, ttext, length)
     end
 end
 
