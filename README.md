@@ -214,7 +214,7 @@ function QBCore.Functions.Notify(text, texttype, length)
     else
         texttype = texttype or 'primary'
         length = length or 5000
-        TriggerEvent("wais:addNotification", texttype, caption, ttext, length)
+        TriggerEvent("wais:addNotification", texttype, caption, text, length)
     end
 end
 
