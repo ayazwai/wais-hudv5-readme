@@ -228,6 +228,6 @@ TriggerClientEvent("wais:addNotification", source, type, "Title", "Message", 500
 
 --@title: string,
 --@message: string,
---@type: string, [success, error, warning, information]
+--@type: string, [success, error, warning, info]
 --@length: number
 ```
