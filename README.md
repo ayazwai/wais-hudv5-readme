@@ -103,6 +103,18 @@ files({
 
 * You can run hud with ***SALTYCHAT*** or ***PMA-VOICE*** thanks to this table structure ***Config.VoiceSettings*** in the config file.
 
+## How Can I Hide Hud or Map?
+* You can hide or unhide using these events.
+
+```
+    Client side events:
+    "wais:hideHud",
+    "wais:hideRadar"
+
+    TriggerEvent("wais:hideHud", true or false) @boolean
+    TriggerEvent("wais:hideRadar", true or false) @boolean
+```
+
 ## What should I do if I get such a crash
 ![Saltychat crash](https://forum.cfx.re/uploads/default/original/4X/e/8/6/e86d3cc7d96d4deb74f6b50601d43ebe2239af20.png)
 * You are getting this error because you are using *saltychat* and have not set the distances. If you want to know how to set them, follow these steps:
