@@ -49,8 +49,9 @@ files({
 
 ## How can I change the settings to default as I want?
 - Enter the html file and find the public file
-- Open the file named DefaultConfig.js in the Public file, then configure it as you wish.
+- Open the file named DefaultConfig.json in the Public file, then configure it as you wish.
 - Below are the values that can be written
+- The changes you make here will be active for the person who enters the server for the first time or resets the settings
 
 ```
     hudType: "newest", -- old, new or newest
