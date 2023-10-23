@@ -17,7 +17,7 @@ ensure interact-sound
 ensure wais-hudv5
 ```
 
-- The interact-sound script is one of the requirements for hudv5 to work.
+- The [interact-sound](https://github.com/plunkettscott/interact-sound) script is one of the requirements for hudv5 to work.
 - After downloading interact sound, go to the sounds folder in hudv5 and copy the sounds.
 - then drop the copied sound files into the `interact-sound > html > sounds` folder. 
 - Open the interact-sound fxmanifest file and change the `files` variable to 
