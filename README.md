@@ -23,10 +23,10 @@ ensure wais-hudv5
 - Open the interact-sound fxmanifest file and change the `files` variable to 
 
 ```
-files({
-    'html/index.html',
-    'html/sounds/*.ogg',
-})
+files {
+    'client/html/index.html',
+    'client/html/sounds/*.ogg'
+}
 ```
 
 - ### Ox_inventory integration for ESX
