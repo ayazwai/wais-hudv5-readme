@@ -248,8 +248,10 @@ TriggerClientEvent("wais:addNotification", source, type, "Title", "Message", 500
 
 #How to hide or remove Editor Mode from the screen
 - Go to html > public > css > app.css and find the .switch variable
-![image](https://github.com/ayazwai/wais-hudv5-readme/assets/64478381/2ea20465-30bf-4df1-b529-087c519f8f8b)
 - In this section, change the content of `display:flex;` to `display:none` and you're done
+
+![image](https://github.com/ayazwai/wais-hudv5-readme/assets/64478381/2ea20465-30bf-4df1-b529-087c519f8f8b)
+
 
 #Job's display is erroneous not correct. 
 - Go to html > public > css > app.css and find the .info-box variable
