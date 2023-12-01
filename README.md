@@ -117,6 +117,7 @@ files {
 
 ## What should I do if I get such a crash
 ![Saltychat crash](https://forum.cfx.re/uploads/default/original/4X/e/8/6/e86d3cc7d96d4deb74f6b50601d43ebe2239af20.png)
+![Crash2](https://cdn.discordapp.com/attachments/1039535847361499177/1180193662592892969/FiveM_b2699_DumpServer_e6kyDP3rHZ.png?ex=657c8800&is=656a1300&hm=535957817a404adb1f5a2cb226c489c70916ecc52f9978f3eedc98f561982f6d&)
 * You are getting this error because you are using *saltychat* and have not set the distances. If you want to know how to set them, follow these steps:
 
 * Open **Saltychat/config.json** and find this veriable **"VoiceRanges"**. Enter the numeric values you see in this variable into hud just like in this example:
