@@ -81,6 +81,26 @@ files {
     },
 ```
 
+## How do I (remove, delete or hide) elements
+- Follow the file path wais-hudv5 / html / public / DeletedElements.json and open the file.
+- Change the `false` variable next to the content you want to remove completely to `true` and then restart the script.
+
+```
+{
+    "serverInfo": true,
+    "id": false,
+    "players": false,
+    "clockNdate": false,
+    "cash": false,
+    "bank": false,
+    "job": false,
+    "job2": false,
+    "gang": false,
+    "weapons": false,
+    "keybinds": false
+}
+```
+
 ---
 
 ## How do I activate the map only in the vehicle?
@@ -246,13 +266,15 @@ TriggerClientEvent("wais:addNotification", source, type, "Title", "Message", 500
 --@length: number
 ```
 
-# How to hide or remove Editor Mode from the screen
-- Go to html > public > css > app.css and find the .switch variable
-- In this section, change the content of `display:flex;` to `display:none` and you're done
+# How to use Job2
+- You need to trigger the following event when the user has the 2nd job
 
-![image](https://github.com/ayazwai/wais-hudv5-readme/assets/64478381/2ea20465-30bf-4df1-b529-087c519f8f8b)
+```
+---@table { name = "test", label = "test" } -- It must contain name and label variables.
+---or just send name as argument
+---@label -- string.
 
+TriggerEvent('wais:set:job2', "JOB2 LABEL")
+TriggerClientEvent('wais:set:job2', source, label or table)
 
-# Job's display is erroneous not correct. 
-- Go to html > public > css > app.css and find the .info-box variable
-and make the `max-width: 40vh;` variable in it 60 or delete it, if you delete it, some appearance errors may occur during animations.
+```
