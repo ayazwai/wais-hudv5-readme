@@ -54,8 +54,8 @@ files {
 		money = ESX.Math.Round(money)
 
 		if money >= 0 then
-			self.player.setMoney(money)
-            TriggerEvent('wais:updateMoney', self.source)
+                    	self.player.setMoney(money)
+            	    	TriggerEvent('wais:updateMoney', self.source)
 		end
 	end
 
