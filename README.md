@@ -45,6 +45,39 @@ files {
 
 - - If you are using SharedEvent old core, you can find and paste the shared event from any script or from the infrastructure itself. This is important.
 
+### Money adaptation for "OLD ESX" or "CHEZZA INVENTORY"
+- Go to es_extended > server > classes > player.lua
+- And find the functions below and add the events as done
+
+```
+	self.setMoney = function(money)
+		money = ESX.Math.Round(money)
+
+		if money >= 0 then
+			self.player.setMoney(money)
+            TriggerEvent('wais:updateMoney', self.source)
+		end
+	end
+
+	self.addMoney = function(money)
+		money = ESX.Math.Round(money)
+
+		if money >= 0 then
+			self.player.addMoney(money)
+			TriggerEvent('wais:updateMoney', self.source)
+		end
+	end
+
+	self.removeMoney = function(money)
+		money = ESX.Math.Round(money)
+
+		if money > 0 then
+			self.player.removeMoney(money)
+			TriggerEvent('wais:updateMoney', self.source)
+		end
+	end
+```
+
 ---
 
 ## How can I change the settings to default as I want?
@@ -276,5 +309,17 @@ TriggerClientEvent("wais:addNotification", source, type, "Title", "Message", 500
 
 TriggerEvent('wais:set:job2', "JOB2 LABEL")
 TriggerClientEvent('wais:set:job2', source, label or table)
+
+```
+
+# How to use Gang
+- You need to trigger the following event when the user has the gang
+
+```
+---@table { name = "none", label = "none" } -- It must contain name and label variables.
+--- Default name must be "none"
+
+TriggerEvent('wais:set:gang', table)
+TriggerClientEvent('wais:set:gang', source, table)
 
 ```
