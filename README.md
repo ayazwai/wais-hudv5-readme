@@ -2,7 +2,6 @@
 - #### Author: Ayazwai#3900
 - #### Linkedin: [Ayaz Ekrem](https://www.linkedin.com/in/ayaz-ekrem-770305212/)
 - #### Instagram: [Ayaz Ekrem](https://www.instagram.com/ayaz.ekremm/)
-- #### Discord Server: [Wais Development](https://discord.com/invite/YanMPNg8Zn)
 - ### Sold exclusively at [0resmon](0resmon.tebex.io) tebex.
 
 # How to set it up
