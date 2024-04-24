@@ -167,7 +167,7 @@ files {
     TriggerEvent("wais:hideRadar", true or false) @boolean
 ```
 
-## What should I do if I get such a crash
+## What should I do if I get such a crash / Saltychat Range Error 
 ![Saltychat crash](https://i.imgur.com/uCo9OT8.png)
 ![Crash2](https://i.imgur.com/Bc561p2.png)
 * You are getting this error because you are using *saltychat* and have not set the distances. If you want to know how to set them, follow these steps:
