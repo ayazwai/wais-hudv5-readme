@@ -33,7 +33,7 @@ files {
 - - For those who use ox_inventory, there is a step to be done.
 - - Go to `es_extended\server\classes\overrides` and open `oxinventory.lua` file. 
 - - You should find the `syncInventory` function and add this event like the photo below. Event ` TriggerClientEvent('wais:checkInventory', self.source, items) `
-- - ![Event view](https://media.discordapp.net/attachments/1035485961217384488/1159986975667933204/image.png?ex=65f4d18e&is=65e25c8e&hm=149d65f2ec25bb6e32014a5ab07cc0fb67c2ed73a229c1adb076d7d60b4ae37a&=&format=webp&quality=lossless&width=652&height=441)
+- - ![Event view](https://i.imgur.com/Si14Ld0.png)
 
 - ### Framework Settings
 - - You can change the framework variable to `esx` or `qbcore` depending on the type you use
