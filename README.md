@@ -156,7 +156,7 @@ files {
 * You can run hud with ***SALTYCHAT*** or ***PMA-VOICE*** thanks to this table structure ***Config.VoiceSettings*** in the config file.
 
 ## How Can I Hide Hud or Map?
-* You can hide or unhide using these events.
+* You can hide or unhide using these eventsNotyf
 
 ```
     Client side events:
@@ -282,6 +282,74 @@ function QBCore.Functions.Notify(text, texttype, length)
         length = length or 5000
         TriggerEvent("wais:addNotification", texttype, caption, text, length)
     end
+end
+
+```
+
+## For QBOX:
+- - Open qbx_core folder
+- - Open client folder
+- - Open functions.lua
+- - Find the function called ***Notify***
+
+```
+function Notify(text, notifyType, duration, subTitle, notifyPosition, notifyStyle, notifyIcon, notifyIconColor)
+    local title, description
+    if type(text) == 'table' then
+        title = text.text or 'Placeholder'
+        description = text.caption or nil
+    elseif subTitle then
+        title = text
+        description = subTitle
+    else
+        description = text
+    end
+    local position = notifyPosition or positionConfig
+
+    lib.notify({
+        id = title,
+        title = title,
+        description = description,
+        duration = duration,
+        type = notifyType,
+        position = position,
+        style = notifyStyle,
+        icon = notifyIcon,
+        iconColor = notifyIconColor
+    })
+end
+
+Change to this:
+
+function Notify(text, notifyType, duration, subTitle, notifyPosition, notifyStyle, notifyIcon, notifyIconColor)
+    local title, description
+    if type(text) == "table" then
+        local ttext = text.text or 'Placeholder'
+        local caption = text.caption or 'Placeholder'
+        texttype = texttype or 'primary'
+        length = length or 5000
+        TriggerEvent("wais:addNotification", texttype, caption, ttext, length)
+    else
+        texttype = texttype or 'primary'
+        length = length or 5000
+        TriggerEvent("wais:addNotification", texttype, caption, text, length)
+    end
+    
+
+    
+    local position = notifyPosition or positionConfig
+
+    lib.notify({
+        id = ttext,
+        title = ttext,
+        description = caption,
+        duration = length,
+        type = texttype,
+        position = position,
+        style = notifyStyle,
+        icon = notifyIcon,
+        iconColor = notifyIconColor
+    })
 end
 
 ```
