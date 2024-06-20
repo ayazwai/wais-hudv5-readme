@@ -156,7 +156,7 @@ files {
 * You can run hud with ***SALTYCHAT*** or ***PMA-VOICE*** thanks to this table structure ***Config.VoiceSettings*** in the config file.
 
 ## How Can I Hide Hud or Map?
-* You can hide or unhide using these eventsNotyf
+* You can hide or unhide using these events
 
 ```
     Client side events:
